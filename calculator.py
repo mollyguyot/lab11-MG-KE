@@ -1,11 +1,10 @@
-import math 
+import math
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
-
-One function per operation, in order.
 """
-# First example
+
 def add(a, b): 
     return a + b
 
@@ -25,7 +24,7 @@ def log(base, value):
         raise ValueError("Base must be positive and cannot equal 1")
     if value <= 0:
         raise ValueError("Value must be positive")
-    return math.log(base, value)
+    return math.log(value, base)  
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
@@ -34,4 +33,3 @@ def square_root(a):
     if a < 0:
         raise ValueError("Value must be positive")
     return math.sqrt(a)
-    
