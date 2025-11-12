@@ -1,3 +1,4 @@
+# https://github.com/yourusername/your-repo-name
 import unittest
 from calculator import *
 
@@ -13,31 +14,32 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(subtract(-3, -2), -1)
 
     def test_multiply(self):
-        self.assertEqual(multiply(2, 3), 6)
-        self.assertEqual(multiply(4, 2), 8)
-        self.assertEqual(multiply(2, 2), 4)
+        self.assertEqual(mul(2, 3), 6)
+        self.assertEqual(mul(4, 2), 8)
+        self.assertEqual(mul(2, 2), 4)
 
     def test_divide(self):
-        self.assertEqual(divide(4, 2), 2)
-        self.assertEqual(divide(8, 4), 2)
-        self.assertEqual(divide(9, 3), 3)
+        self.assertEqual(div(4, 2), 2)
+        self.assertEqual(div(8, 4), 2)
+        self.assertEqual(div(9, 3), 3)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ValueError):
-            divide(9, 0)
+            div(9, 0)
 
     def test_logarithm(self):
-        self.assertEqual(log(10, 100), 2)
-        self.assertEqual(log(2, 8), 3)
-        self.assertEqual(log(5, 625), 4)
+        self.assertEqual(logarithm(10, 100), 2)
+        self.assertEqual(logarithm(2, 8), 3)
+        self.assertEqual(logarithm(5, 625), 4)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            log(1, 25)
+            logarithm(1, 25)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            log(5, 0)
+            logarithm(5, 0)
+
 
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -50,6 +52,10 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(square_root(4), 2)
         self.assertEqual(square_root(16), 4)
         self.assertEqual(square_root(25), 5)
+
+if __name__ == "__main__":
+    unittest.main()
+
 
 if __name__ == "__main__":
     unittest.main()
