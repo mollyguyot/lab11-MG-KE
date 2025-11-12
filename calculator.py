@@ -27,4 +27,5 @@ def log(base, value):
         raise ValueError("Value must be positive")
     return math.log(base, value)
 
-
+def hypotenuse(a, b):
+    math.hypot(a, b)
