@@ -52,8 +52,8 @@ class TestCalculator(unittest.TestCase):
     #     #     logarithm(0, 5)
     #     fill in code
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        
 
     def test_sqrt(self): # 3 assertions
         with self.assertRaises(ValueError)
@@ -61,12 +61,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(square_root(4), 2)
         self.assertEqual(square_root(16), 4)
         self.assertEqual(square_root(25), 5
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
+  
 
 # Do not touch this
 if __name__ == "__main__":
