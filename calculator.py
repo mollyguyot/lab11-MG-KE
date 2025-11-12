@@ -29,3 +29,9 @@ def log(base, value):
 
 def hypotenuse(a, b):
     math.hypot(a, b)
+
+def square_root(a):
+    if a < 0:
+        raise ValueError("Value must be positive")
+    return math.sqrt(a)
+    
