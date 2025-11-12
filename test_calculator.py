@@ -62,7 +62,7 @@ class TestCalculator(unittest.TestCase):
             square_root(-3)
         self.assertEqual(square_root(4), 2)
         self.assertEqual(square_root(16), 4)
-        self.assertEqual(square_root(25), 5
+        self.assertEqual(square_root(25), 5)
   
 
 # Do not touch this
