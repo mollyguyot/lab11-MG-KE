@@ -1,4 +1,4 @@
-# https://github.com/yourusername/your-repo-name
+# https://github.com/keiraevans/lab-11-MG-KE
 import unittest
 from calculator import *
 
