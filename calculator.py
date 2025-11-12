@@ -1,9 +1,5 @@
+# https://github.com/keiraevans/lab-11-MG-KE
 import math
-
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-"""
 
 def add(a, b): 
     return a + b
@@ -11,20 +7,23 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def multiply(a, b):
+def mul(a, b):  # renamed
     return a * b
 
-def divide(a, b):
+def div(a, b):  # renamed
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
 
-def log(base, value):
+def logarithm(base, value):  # renamed
     if base <= 0 or base == 1:
         raise ValueError("Base must be positive and cannot equal 1")
     if value <= 0:
         raise ValueError("Value must be positive")
-    return math.log(value, base)  
+    return math.log(value, base)
+
+def exp(a, b):  # new function
+    return a ** b
 
 def hypotenuse(a, b):
     return math.hypot(a, b)
@@ -33,3 +32,4 @@ def square_root(a):
     if a < 0:
         raise ValueError("Value must be positive")
     return math.sqrt(a)
+
