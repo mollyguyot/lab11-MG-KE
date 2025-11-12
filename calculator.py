@@ -28,7 +28,7 @@ def log(base, value):
     return math.log(base, value)
 
 def hypotenuse(a, b):
-    math.hypot(a, b)
+    return math.hypot(a, b)
 
 def square_root(a):
     if a < 0:
