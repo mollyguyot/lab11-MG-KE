@@ -4,7 +4,7 @@ import math
 def add(a, b):
     return a + b
 
-def sub(a, b):  # renamed
+def subtract(a, b):  # renamed
     return a - b
 
 def mul(a, b):
@@ -15,7 +15,7 @@ def div(a, b):
         raise ZeroDivisionError("Cannot divide by zero")
     return a / b
 
-def log(a, b):  # renamed
+def logarithm(a, b):  # renamed
     if a <= 0 or a == 1:
         raise ValueError("Base must be positive and cannot equal 1")
     if b <= 0:
