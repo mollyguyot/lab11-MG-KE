@@ -10,10 +10,14 @@ def subtract(a, b):  # renamed
 def mul(a, b):
     return a * b
 
-def div(a, b):
-    if b == 0:
-        raise ZeroDivisionError("Cannot divide by zero")
-    return a / b
+def test_divide(self): 
+    self.assertEqual(div(4, 2), 2) 
+    self.assertEqual(div(8, 4), 2) 
+    self.assertEqual(div(9, 3), 3) 
+
+def test_divide_by_zero(self): 
+with self.assertRaises(ValueError): 
+    div(9, 0)
 
 def logarithm(a, b):  # renamed
     if a <= 0 or a == 1:
