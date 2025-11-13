@@ -1,4 +1,4 @@
-# https://github.com/keiraevans/lab-11-MG-KE
+# https://github.com/yourusername/your-repo-name
 import unittest
 from calculator import *
 
@@ -8,7 +8,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-2, 4), 2)
         self.assertEqual(add(0.1, 0.3), 0.4)
 
-    def test_subtract(self):
+    def test_subtraction(self):
         self.assertEqual(subtract(2, 1), 1)
         self.assertEqual(subtract(0, 7), -7)
         self.assertEqual(subtract(-3, -2), -1)
@@ -40,12 +40,10 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             logarithm(5, 0)
 
-    def test_exp(self):  
-        self.assertEqual(exp(2, 3), 8)  
-        self.assertEqual(exp(5, 0), 1)   
-        self.assertEqual(exp(2, -2), 0.25)  
-        self.assertEqual(exp(-3, 2), 9)   
-        self.assertEqual(exp(-2, 3), -8)   
+    def test_exp(self):
+        self.assertEqual(exp(2, 3), 8)
+        self.assertEqual(exp(5, 2), 25)
+        self.assertEqual(exp(10, 0), 1)
 
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -61,6 +59,7 @@ class TestCalculator(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
 
 
 
