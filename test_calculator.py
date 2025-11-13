@@ -3,15 +3,16 @@ import unittest
 from calculator import *
 
 class TestCalculator(unittest.TestCase):
+
     def test_add(self):
         self.assertEqual(add(1, 2), 3)
         self.assertEqual(add(-2, 4), 2)
         self.assertEqual(add(0.1, 0.3), 0.4)
 
-    def test_subtraction(self):
-        self.assertEqual(subtract(2, 1), 1)
-        self.assertEqual(subtract(0, 7), -7)
-        self.assertEqual(subtract(-3, -2), -1)
+    def test_subtract(self):
+        self.assertEqual(sub(2, 1), 1)
+        self.assertEqual(sub(0, 7), -7)
+        self.assertEqual(sub(-3, -2), -1)
 
     def test_multiply(self):
         self.assertEqual(mul(2, 3), 6)
@@ -24,29 +25,28 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(div(9, 3), 3)
 
     def test_divide_by_zero(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ZeroDivisionError):
             div(9, 0)
 
     def test_logarithm(self):
-        self.assertEqual(logarithm(10, 100), 2)
-        self.assertEqual(logarithm(2, 8), 3)
-        self.assertEqual(logarithm(5, 625), 4)
+        self.assertEqual(log(10, 100), 2)
+        self.assertEqual(log(2, 8), 3)
+        self.assertEqual(log(5, 625), 4)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            logarithm(1, 25)
+            log(1, 25)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            logarithm(5, 0)
+            log(5, 0)
 
-    def test_exp(self):  
-        self.assertEqual(exp(2, 3), 8)  
-        self.assertEqual(exp(5, 0), 1)       
-        self.assertEqual(exp(2, -2), 0.25) 
-        self.assertEqual(exp(-3, 2), 9)       
+    def test_exp(self):
+        self.assertEqual(exp(2, 3), 8)
+        self.assertEqual(exp(5, 0), 1)
+        self.assertEqual(exp(2, -2), 0.25)
+        self.assertEqual(exp(-3, 2), 9)
         self.assertEqual(exp(-2, 3), -8)
-
 
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -62,4 +62,5 @@ class TestCalculator(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
 
