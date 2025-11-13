@@ -40,6 +40,13 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             logarithm(5, 0)
 
+    def test_exp(self):  
+        self.assertEqual(exp(2, 3), 8)  
+        self.assertEqual(exp(5, 0), 1)       
+        self.assertEqual(exp(2, -2), 0.25) 
+        self.assertEqual(exp(-3, 2), 9)       
+        self.assertEqual(exp(-2, 3), -8)
+
 
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
