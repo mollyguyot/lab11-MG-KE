@@ -1,4 +1,4 @@
-# https://github.com/yourusername/your-repo-name
+# https://github.com/keiraevnas/lab11-MG-KE
 import math
 
 def add(a, b):
