@@ -58,7 +58,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(square_root(25), 5)
 
 if __name__ == "__main__":
-    unittest.main(verbosity=0)
+    if __name__ == "__main__":
+    import io
+    import sys
+
+    # Capture and suppress unittest output
+    buffer = io.StringIO()
+    runner = unittest.TextTestRunner(stream=buffer, verbosity=0)
+
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestCalculator)
+    runner.run(suite)
 
 
 
